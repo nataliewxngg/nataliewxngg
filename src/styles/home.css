@@ -56,3 +56,23 @@ footer svg:hover {
     fill: var(--primary-color);
     cursor: pointer;
 }
+
+@media only screen and (max-width: 900px) {
+    body {
+        min-height: calc(100vh - 50px);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+
+    nav {
+        height: 50px;
+        width: 100%;
+        
+        position: fixed;
+        bottom: 0;
+    }
+
+    footer {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+}
