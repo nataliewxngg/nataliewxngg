@@ -84,7 +84,6 @@ nav header {
 
 nav.hidden { width: 80px; }
 nav.hidden header h1 { display: none; }
-nav.hidden #shrink-nav-button { left: 3rem; }
 nav.hidden #shrink-nav-button svg { transform: rotate(180deg); }
 
 footer {
