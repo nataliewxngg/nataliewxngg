@@ -17,6 +17,7 @@ shrinkNavButton.addEventListener('click', () => {
     nav.classList.toggle('hidden');
 });
 
+// Remove as more buttons of similar functionality are added
 const buttons = document.querySelectorAll('#main-nav-links button');
 buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -28,5 +29,13 @@ buttons.forEach(button => {
         else if (page === 'projects-button') projects();
         else if (page === 'education-button') education();
         else if (page === 'about-button') about();
+    });
+});
+
+const aboutButtons = document.querySelectorAll('#about-button');
+aboutButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        pageLoad();
+        about();
     });
 });
