@@ -3,7 +3,7 @@ export default function Home() {
     const title = document.querySelector('title');
     title.innerText = 'Natalie Wong';
 
-    const article = document.querySelector('article');
+    const article = document.querySelector('#content header');
 
     // Header
     const heading = document.createElement('h1');
