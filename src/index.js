@@ -11,7 +11,13 @@ import './styles/home.css';
 
 firstLoad();
 
-const buttons = document.querySelectorAll('nav button');
+const nav = document.querySelector('nav');
+const shrinkNavButton = document.getElementById('shrink-nav-button');
+shrinkNavButton.addEventListener('click', () => {
+    nav.classList.toggle('hidden');
+});
+
+const buttons = document.querySelectorAll('#main-nav-links button');
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         pageLoad();
