@@ -7,7 +7,7 @@ export default function Home() {
     const homeButton = document.querySelector('#home-button');
     homeButton.classList.add('active');
 
-    const article = document.querySelector('#content header');
+    const article = document.querySelector('#content');
 
     // Header
     const heading = document.createElement('h1');

@@ -182,14 +182,15 @@ footer svg:hover {
 article { 
     padding: 8rem 15% 0 15%; 
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 article #header-profile { display: none; }
 
-#home-heading { font-size: clamp(2rem, 5vw, 3rem); }
+#home-heading { 
+    font-size: clamp(2rem, 5vw, 3rem); 
+}
 
 #home-heading span { color: var(--primary-color); }
 
