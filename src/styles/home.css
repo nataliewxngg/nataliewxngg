@@ -38,7 +38,7 @@ nav {
     background-color: var(--muted-bg-color);
     border-right: 1px solid var(--outline-color);
     text-align: left;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem;
 
     transition: var(--default-transition);
 }
@@ -52,20 +52,20 @@ nav header {
     align-items: center;
 }
 
-#nav-header-profile {
+#header-profile {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-#nav-header-profile h1 { font-size: 1rem; }
+#header-profile h1 { font-size: 1rem; }
 
-#nav-header-profile p {
+#header-profile p {
     color: var(--primary-color);
     font-size: 0.8rem;
 }
 
-#nav-header-profile img {
+#header-profile img {
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -76,14 +76,14 @@ nav header {
     background-color: var(--muted-bg-color);
     border: 1px solid var(--outline-color);
     border-radius: 100%;
-    width: 30px; 
-    height: 30px; 
+    width: 35px; 
+    height: 35px; 
 
     display: flex;
     justify-content: center;
 
     position: relative;
-    left: 3rem;
+    left: 2.6rem;
 }
 
 #shrink-nav-button:hover {
@@ -104,14 +104,56 @@ nav.hidden {
     padding: 1.5rem 1.5rem;
 }
 
-nav.hidden #nav-header-profile img {
+nav.hidden #header-profile img {
     width: 30px;
     height: 30px;
 }
 
-nav.hidden #shrink-nav-button { left: 1rem; }
-nav.hidden #nav-header-profile div { display: none; }
+nav.hidden #shrink-nav-button { left: 0.8rem; }
+nav.hidden #header-profile div { display: none; }
 nav.hidden #shrink-nav-button svg { transform: rotate(180deg); }
+
+#main-nav-links {
+    margin: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+nav button {
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 10px;
+
+    font-size: 0.9rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav button.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
+
+nav button svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-color);
+    vertical-align: middle;
+}
+
+nav button:hover {
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+nav button:hover svg {
+    fill: var(--text-color);
+}
 
 footer {
     height: 50px;
@@ -145,6 +187,8 @@ article {
     justify-content: space-between;
 }
 
+article #header-profile { display: none; }
+
 #home-heading { font-size: clamp(2rem, 5vw, 3rem); }
 
 #home-heading span { color: var(--primary-color); }
@@ -156,8 +200,6 @@ article {
         grid-template-columns: 1fr;
     }
 
-    article { margin-bottom: 50px; }
-
     nav {
         height: 50px;
         width: 100%;
@@ -167,5 +209,15 @@ article {
     }
 
     #shrink-nav-button { display: none; }
-    #nav-header-profile { display: none; }
+    #header-profile { display: none; }
+
+    article { 
+        padding: 2rem 10% 0 10%;
+        margin-bottom: 50px; 
+    }
+
+    article #header-profile {
+        display: flex;
+        margin-bottom: 2rem;
+    }
 }

@@ -3,6 +3,10 @@ export default function Home() {
     const title = document.querySelector('title');
     title.innerText = 'Natalie Wong';
 
+    // Set active page
+    const homeButton = document.querySelector('#home-button');
+    homeButton.classList.add('active');
+
     const article = document.querySelector('#content header');
 
     // Header
