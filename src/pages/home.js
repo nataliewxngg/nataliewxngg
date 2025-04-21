@@ -1,3 +1,6 @@
+import pageLoad from '../functions/pageLoad.js';
+import about from './about.js';
+
 export default function Home() {
     // Set page title
     const title = document.querySelector('title');
@@ -45,15 +48,14 @@ export default function Home() {
     buttons.setAttribute('id', 'buttons-container');
     const aboutButton = document.createElement('button');
     aboutButton.setAttribute('id', 'about-button');
-    aboutButton.innerText = 'About Me';
+    aboutButton.innerText = 'About';
     buttons.appendChild(aboutButton);
-    const emailButton = document.createElement('button');
-    emailButton.setAttribute('id', 'email-button');
-    const emailLink = document.createElement('a');
-    emailLink.setAttribute('href', 'mailto:natalieltwong@gmail.com');
-    emailLink.innerText = 'Email';
-    emailButton.appendChild(emailLink);
-    buttons.appendChild(emailButton);
+    aboutButton.addEventListener('click', () => { pageLoad(); about(); });
+    const contactMeButton = document.createElement('button');
+    contactMeButton.setAttribute('id', 'contact-me-button');
+    contactMeButton.innerText = 'Contact Me';
+    buttons.appendChild(contactMeButton);
+    contactMeButton.addEventListener('click', () => { window.location.replace('mailto: natalieltwong@gmail.com') });
     header.appendChild(buttons);
 
     content.appendChild(header);
