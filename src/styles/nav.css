@@ -1,0 +1,152 @@
+nav {
+    width: clamp(260px, 20vw, 270px);
+    background-color: var(--muted-bg-color);
+    border-right: 1px solid var(--outline-color);
+    padding: 2rem 1.5rem;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    transition: var(--default-transition);
+}
+
+#shrink-nav-button {
+    background-color: var(--muted-bg-color);
+    border: 1px solid var(--outline-color);
+    border-radius: 100%;
+    width: 35px; 
+    height: 35px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: clamp(calc(260px - 17.5px), calc(20vw - 17.5px), calc(270px - 17.5px));
+    top: 2rem;
+
+    transition: var(--default-transition);
+}
+#shrink-nav-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#shrink-nav-button svg {
+    fill: var(--primary-color);
+    min-width: 18px;
+    min-height: 18px;
+    vertical-align: middle;
+
+    transition: var(--default-transition);
+}
+#shrink-nav-button:hover svg { fill: var(--text-color); }
+
+/* Hidden navbar styles */
+nav.hidden { 
+    width: 80px;
+    padding: 1.5rem 1rem;
+    justify-items: center;
+}
+
+nav.hidden #profile img {
+    width: 35px;
+    height: 35px;
+}
+
+nav.hidden #shrink-nav-button { 
+    border-radius: 40%;
+
+    width: 10px;
+    top: 1.5rem;
+    left:  70px;
+}
+
+nav.hidden #profile div, 
+nav.hidden #main-nav-links p { display: none; }
+nav.hidden #shrink-nav-button svg { transform: rotate(180deg); }
+nav.hidden #main-nav-links svg { min-width: 20px; }
+
+#main-nav-links {
+    margin: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+nav button {
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+
+    font-size: 0.9rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    transition: var(--default-transition);
+}
+nav button:hover {
+    cursor: pointer;
+    color: var(--text-color);
+}
+nav button.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
+
+nav button svg {
+    width: 20px;
+    height: 20px;
+
+    fill: var(--primary-color);
+    vertical-align: middle;
+
+    transition: var(--default-transition);
+}
+nav button:hover svg { fill: var(--text-color); }
+
+@media only screen and (max-width: 900px) {
+    nav, nav.hidden {
+        padding: 0;
+        height: 60px;
+        width: 100%;
+        border-top: 1px solid var(--outline-color);
+
+        position: fixed;
+        bottom: 0;
+    }
+
+    #shrink-nav-button { display: none; }
+    nav #profile { display: none; }
+
+    #main-nav-links, nav.hidden #main-nav-links {
+        width: 100%;
+        margin: 0;
+
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    #main-nav-links button, nav.hidden #main-nav-links button { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0; 
+
+        width: 100%;
+    }
+
+    #main-nav-links button p, nav.hidden #main-nav-links button p {         
+        display: block;
+        font-size: 80%;
+    }
+
+    #main-nav-links svg {
+        width: 20px;
+        height: 20px;
+    }
+}
