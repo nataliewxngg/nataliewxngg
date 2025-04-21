@@ -8,6 +8,7 @@ import education from './pages/education';
 import about from './pages/about';
 
 import './styles/home.css';
+import './styles/nav.css';
 
 firstLoad();
 

@@ -20,9 +20,20 @@ export default function Home() {
     greeting.appendChild(greetingSpan);
     header.appendChild(greeting);
 
-    const location = document.createElement('p');
+    const location = document.createElement('div');
     location.setAttribute('id', 'location');
-    location.innerText = 'Markham, Ontario, Canada';
+    const locationSVG = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    const locationSVGPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    locationSVG.setAttribute('viewBox', '0 0 24 24');
+    locationSVGPath.setAttribute(
+        'd', 
+        'M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z'
+    );
+    const locationText = document.createElement('p');
+    locationText.innerText = 'Markham, Ontario, Canada';
+    locationSVG.appendChild(locationSVGPath);
+    location.appendChild(locationSVG);
+    location.appendChild(locationText);
     header.appendChild(location);
 
     const description = document.createElement('p');
@@ -30,18 +41,20 @@ export default function Home() {
     description.innerText = 'I\'m an 18 year old full-stack developer with a passion for creating web applications and discovering new technologies. I love to learn and am always seeking new challenges.';
     header.appendChild(description);
 
+    const buttons = document.createElement('div');
+    buttons.setAttribute('id', 'buttons-container');
     const aboutButton = document.createElement('button');
     aboutButton.setAttribute('id', 'about-button');
     aboutButton.innerText = 'About Me';
-    header.appendChild(aboutButton);
-
+    buttons.appendChild(aboutButton);
     const emailButton = document.createElement('button');
     emailButton.setAttribute('id', 'email-button');
     const emailLink = document.createElement('a');
     emailLink.setAttribute('href', 'mailto:natalieltwong@gmail.com');
     emailLink.innerText = 'Email';
     emailButton.appendChild(emailLink);
-    header.appendChild(emailButton);
+    buttons.appendChild(emailButton);
+    header.appendChild(buttons);
 
     content.appendChild(header);
 
