@@ -135,37 +135,21 @@ article #profile { display: none; }
 }
 #content header button:hover {
     cursor: pointer;
-    color: var(--primary-color);
+    color: rgb(160, 160, 160); 
+    
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: rgb(33, 33, 33);
 }
-
-#content header button a {
-    text-decoration: none;
-    color: var(--text-color);
-
-    transition: var(--default-transition);
-}
-#content header button:hover a { color: var(--primary-color); }
 
 #content header #contact-me-button { 
     display: flex;
     gap: 0.8rem;
     align-items: center;
+    background-color: rgb(41, 41, 41);
 
     position: relative; 
-    /* set a different background color to stand out */
 }
-
-#content header #contact-me-button svg {
-    fill: var(--text-color);
-    width: 20px;
-    height: 20px;
-
-    transition: var(--default-transition);
-}
-#content header #contact-me-button:hover svg {
-    fill: var(--primary-color);
-    cursor: pointer;
-}
+#content header #contact-me-button:hover { background-color: rgb(31, 31, 31); }
 
 @property --angle { 
     syntax: '<angle>';

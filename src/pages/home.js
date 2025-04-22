@@ -60,5 +60,10 @@ export default function Home() {
 
     content.appendChild(header);
 
-    // 
+    // My Tech Stack
+    const techStackTitle = document.createElement('h1');
+
+    // Projects
+
+    // About
 }
