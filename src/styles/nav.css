@@ -118,6 +118,8 @@ nav button:hover svg { fill: var(--text-color); }
 
         position: fixed;
         bottom: 0;
+
+        z-index: 1;
     }
 
     #shrink-nav-button { display: none; }

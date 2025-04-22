@@ -61,9 +61,121 @@ export default function Home() {
     content.appendChild(header);
 
     // My Tech Stack
-    const techStackTitle = document.createElement('h1');
+    const techStack = document.createElement('section');
+    techStack.setAttribute('id', 'tech-stack');
+    const techStackTitle = document.createElement('h2');
+    techStackTitle.innerText = 'My Tech Stack';
+
+    const techStackList1Container = document.createElement('div');
+    techStackList1Container.classList.add('wrapper');
+    techStackList1Container.setAttribute('id', 'tech-stack-list-1');
+    // HTML
+    const list1Item1 = document.createElement('div');
+    list1Item1.classList.add('item');
+    list1Item1.classList.add('item-1');
+    list1Item1.textContent = 'HTML';
+    techStackList1Container.appendChild(list1Item1);
+    // CSS
+    const list1Item2 = document.createElement('div');
+    list1Item2.classList.add('item');
+    list1Item2.classList.add('item-2');
+    list1Item2.textContent = 'CSS';
+    techStackList1Container.appendChild(list1Item2);
+    // JS
+    const list1Item3 = document.createElement('div');
+    list1Item3.classList.add('item');
+    list1Item3.classList.add('item-3');
+    list1Item3.textContent = 'JavaScript';
+    techStackList1Container.appendChild(list1Item3);
+    // Python
+    const list1Item4 = document.createElement('div');
+    list1Item4.classList.add('item');
+    list1Item4.classList.add('item-4');
+    list1Item4.textContent = 'Python';
+    techStackList1Container.appendChild(list1Item4);
+    // Java
+    const list1Item5 = document.createElement('div');
+    list1Item5.classList.add('item');
+    list1Item5.classList.add('item-5');
+    list1Item5.textContent = 'Java';
+    techStackList1Container.appendChild(list1Item5);
+    // C++
+    const list1Item6 = document.createElement('div');
+    list1Item6.classList.add('item');
+    list1Item6.classList.add('item-6');
+    list1Item6.textContent = 'C++';
+    techStackList1Container.appendChild(list1Item6);
+    // C#
+    const list1Item7 = document.createElement('div');
+    list1Item7.classList.add('item');
+    list1Item7.classList.add('item-7');
+    list1Item7.textContent = 'C#';
+    techStackList1Container.appendChild(list1Item7);
+    
+    const techStackList2Container = document.createElement('div');
+    techStackList2Container.classList.add('wrapper');
+    techStackList2Container.setAttribute('id', 'tech-stack-list-2');
+    // Git
+    const list2Item1 = document.createElement('div');
+    list2Item1.classList.add('item');
+    list2Item1.classList.add('item-1');
+    list2Item1.textContent = 'Git';
+    techStackList2Container.appendChild(list2Item1);
+    // VSCode
+    const list2Item2 = document.createElement('div');
+    list2Item2.classList.add('item');
+    list2Item2.classList.add('item-2');
+    list2Item2.textContent = 'VSCode';
+    techStackList2Container.appendChild(list2Item2);
+    // PyCharm
+    const list2Item3 = document.createElement('div');
+    list2Item3.classList.add('item');
+    list2Item3.classList.add('item-3');
+    list2Item3.textContent = 'PyCharm';
+    techStackList2Container.appendChild(list2Item3);
+    // IntelliJ
+    const list2Item4 = document.createElement('div');
+    list2Item4.classList.add('item');
+    list2Item4.classList.add('item-4');
+    list2Item4.textContent = 'IntelliJ';
+    techStackList2Container.appendChild(list2Item4);
+    // Eclipse IDE
+    const list2Item5 = document.createElement('div');
+    list2Item5.classList.add('item');
+    list2Item5.classList.add('item-5');
+    list2Item5.textContent = 'Eclipse IDE';
+    techStackList2Container.appendChild(list2Item5);
+    // Jira
+    const list2Item6 = document.createElement('div');
+    list2Item6.classList.add('item');
+    list2Item6.classList.add('item-6');
+    list2Item6.textContent = 'Jira';
+    techStackList2Container.appendChild(list2Item6);
+    // Figma
+    const list2Item7 = document.createElement('div');
+    list2Item7.classList.add('item');
+    list2Item7.classList.add('item-7');
+    list2Item7.textContent = 'Figma';
+    techStackList2Container.appendChild(list2Item7);
+
+    techStack.appendChild(techStackTitle);
+    techStack.appendChild(techStackList1Container);
+    techStack.appendChild(techStackList2Container);
+    content.appendChild(techStack);
 
     // Projects
+    const projects = document.createElement('section');
+    projects.setAttribute('id', 'projects');
+    const projectsTitle = document.createElement('h2');
+    projectsTitle.innerText = 'Projects';
+    projects.appendChild(projectsTitle);
+    content.appendChild(projects);
 
     // About
+    const about = document.createElement('section');
+    about.setAttribute('id', 'about');
+    const aboutTitle = document.createElement('h2');
+    aboutTitle.innerText = 'About Me';
+    about.appendChild(aboutTitle);
+    content.appendChild(about);
 }
