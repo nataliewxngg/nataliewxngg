@@ -7,6 +7,11 @@ nav {
     display: grid;
     grid-template-rows: auto 1fr;
 
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+
     transition: var(--default-transition);
 }
 
@@ -118,6 +123,7 @@ nav button:hover svg { fill: var(--text-color); }
 
         position: fixed;
         bottom: 0;
+        top: unset;
 
         z-index: 1;
     }
