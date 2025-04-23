@@ -87,6 +87,8 @@ article {
 
 article #profile { display: none; }
 
+#content { display: grid; }
+
 #content header {
     display: flex;
     flex-direction: column;
@@ -184,66 +186,45 @@ article #profile { display: none; }
 /* Section styles */
 #content section { margin-top: 2rem; }
 
-#content section h2 {
-    margin-bottom: 1rem;
-}
+#content section h2 { margin-bottom: 1rem; }
 
-.wrapper {
-    margin-inline: auto;
-    height: 50px;
+/* Tech Stack styles */
+#tech-stack { overflow: hidden; }
 
-    position: relative;
-    overflow: hidden;
-    mask-image: linear-gradient(
-        to right, 
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 1) 20%,
-        rgba(0, 0, 0, 1) 80%,
-        rgba(0, 0, 0, 0)
+.scroller {
+    -webkit-mask: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        black 20%, 
+        black 80%, 
+        transparent 100%
     );
+    mask: linear-gradient(90deg, transparent 0%, black 20%, black 80%, transparent 100%);
 }
 
-.item {
-    width: 100px;
-    height: 50px;
-    border-radius: 6px;
-
-    position: absolute;
-    left: max(calc(100px * 7), 100%);
-
+.scroller ul {
     display: flex;
-    justify-content: center;
+    gap: 1rem;
+    list-style: none;
     align-items: center;
+
+    flex-wrap: nowrap;
+    width: fit-content;
+    animation: scroll 20s linear infinite;
+}
+.scroller:hover ul { 
+    animation-play-state: paused; 
+    cursor: default;
 }
 
-#tech-stack-list-1 .item {
-    background-color: red;
-    animation: scroll-left 30s linear infinite;
+.scroller img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
 }
 
-#tech-stack-list-2 .item {
-    background-color: orange;
-    animation: scroll-left 35s linear infinite;
-}
-
-#tech-stack-list-1 .item-1 { animation-delay: calc(30s / 7 * (7 - 1) * -1); }
-#tech-stack-list-1 .item-2 { animation-delay: calc(30s / 7 * (7 - 2) * -1); }
-#tech-stack-list-1 .item-3 { animation-delay: calc(30s / 7 * (7 - 3) * -1); }
-#tech-stack-list-1 .item-4 { animation-delay: calc(30s / 7 * (7 - 4) * -1); }
-#tech-stack-list-1 .item-5 { animation-delay: calc(30s / 7 * (7 - 5) * -1); }
-#tech-stack-list-1 .item-6 { animation-delay: calc(30s / 7 * (7 - 6) * -1); }
-#tech-stack-list-1 .item-7 { animation-delay: calc(30s / 7 * (7 - 7) * -1); }
-
-#tech-stack-list-2 .item-1 { animation-delay: calc(35s / 7 * (7 - 1) * -1); }
-#tech-stack-list-2 .item-2 { animation-delay: calc(35s / 7 * (7 - 2) * -1); }
-#tech-stack-list-2 .item-3 { animation-delay: calc(35s / 7 * (7 - 3) * -1); }
-#tech-stack-list-2 .item-4 { animation-delay: calc(35s / 7 * (7 - 4) * -1); }
-#tech-stack-list-2 .item-5 { animation-delay: calc(35s / 7 * (7 - 5) * -1); }
-#tech-stack-list-2 .item-6 { animation-delay: calc(35s / 7 * (7 - 6) * -1); }
-#tech-stack-list-2 .item-7 { animation-delay: calc(35s / 7 * (7 - 7) * -1); }
-
-@keyframes scroll-left {
-    to { left: -200px; }
+@keyframes scroll {
+    to { transform: translate(calc(-50% - 0.5rem)); }
 }
 
 @keyframes spin {

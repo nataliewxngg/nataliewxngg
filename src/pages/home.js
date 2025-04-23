@@ -1,6 +1,8 @@
 import pageLoad from '../functions/pageLoad.js';
 import about from './about.js';
 
+import {techStackList1Container} from '../components/techstack-list-1.js'
+
 export default function Home() {
     // Set page title
     const title = document.querySelector('title');
@@ -61,12 +63,16 @@ export default function Home() {
     content.appendChild(header);
 
     // My Tech Stack
-    const techStack = document.createElement('section');
-    techStack.setAttribute('id', 'tech-stack');
+    const techStackSection = document.createElement('section');
+    techStackSection.setAttribute('id', 'tech-stack');
     const techStackTitle = document.createElement('h2');
     techStackTitle.innerText = 'My Tech Stack';
 
-    const techStackList1Container = document.createElement('div');
+    techStackSection.appendChild(techStackTitle);
+    techStackSection.appendChild(techStackList1Container);
+    content.appendChild(techStackSection);
+
+    /*
     techStackList1Container.classList.add('wrapper');
     techStackList1Container.setAttribute('id', 'tech-stack-list-1');
     // HTML
@@ -163,19 +169,21 @@ export default function Home() {
     techStack.appendChild(techStackList2Container);
     content.appendChild(techStack);
 
+    */
+
     // Projects
-    const projects = document.createElement('section');
-    projects.setAttribute('id', 'projects');
+    const projectsSection = document.createElement('section');
+    projectsSection.setAttribute('id', 'projects');
     const projectsTitle = document.createElement('h2');
     projectsTitle.innerText = 'Projects';
-    projects.appendChild(projectsTitle);
-    content.appendChild(projects);
+    projectsSection.appendChild(projectsTitle);
+    content.appendChild(projectsSection);
 
     // About
-    const about = document.createElement('section');
-    about.setAttribute('id', 'about');
+    const aboutSection = document.createElement('section');
+    aboutSection.setAttribute('id', 'about');
     const aboutTitle = document.createElement('h2');
     aboutTitle.innerText = 'About Me';
-    about.appendChild(aboutTitle);
-    content.appendChild(about);
+    aboutSection.appendChild(aboutTitle);
+    content.appendChild(aboutSection);
 }
