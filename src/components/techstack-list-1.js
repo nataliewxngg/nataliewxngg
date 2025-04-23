@@ -6,99 +6,82 @@ import javaLogo from '../assets/techstack-logos/java-icon.svg';
 import cppLogo from '../assets/techstack-logos/c++-icon.svg';
 import csharpLogo from '../assets/techstack-logos/csharp-icon.svg';
 
-function addAnimation() {
-    const scrollers = document.querySelectorAll('.scroller');
+const techStackListContainer = document.createElement('div');
+techStackListContainer.classList.add('scroller');
 
-    scrollers.forEach((scroller) => {
-        scroller.setAttribute('data-animated', true);
-
-        const scrollerList = document.querySelector('.scroller ul');
-        const scrollerContent = Array.from(scrollerList.children);
-
-        scrollerContent.forEach(item => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute('aria-hidden', true);
-
-            scrollerList.appendChild(duplicatedItem);
-        });
-    });
-}
-
-const techStackList1Container = document.createElement('div');
-techStackList1Container.classList.add('scroller');
-
-const techStackList1 = document.createElement('ul');
+const techStackList = document.createElement('ul');
+techStackList.setAttribute('id', 'tech-stack-list-1');
 
 // HTML, CSS, JS, Python, Java, C++, C#
-const list1Item1 = document.createElement('li');
-const list1Item1Img = document.createElement('img');
-list1Item1Img.setAttribute('src', html5Logo);
-list1Item1.appendChild(list1Item1Img);
-techStackList1.appendChild(list1Item1);
+const listItem1 = document.createElement('li');
+const listItem1Img = document.createElement('img');
+listItem1Img.setAttribute('src', html5Logo);
+listItem1.appendChild(listItem1Img);
+techStackList.appendChild(listItem1);
 
-const list1Item2 = document.createElement('li');
-list1Item2.innerText = 'HTML';
-techStackList1.appendChild(list1Item2);
+const listItem2 = document.createElement('li');
+listItem2.innerText = 'HTML';
+techStackList.appendChild(listItem2);
 
-const list1Item3 = document.createElement('li');
-const list1Item3Img = document.createElement('img');
-list1Item3Img.setAttribute('src', css3Logo);
-list1Item3.appendChild(list1Item3Img);
-techStackList1.appendChild(list1Item3);
+const listItem3 = document.createElement('li');
+const listItem3Img = document.createElement('img');
+listItem3Img.setAttribute('src', css3Logo);
+listItem3.appendChild(listItem3Img);
+techStackList.appendChild(listItem3);
 
-const list1Item4 = document.createElement('li');
-list1Item4.innerText = 'CSS';
-techStackList1.appendChild(list1Item4);
+const listItem4 = document.createElement('li');
+listItem4.innerText = 'CSS';
+techStackList.appendChild(listItem4);
 
-const list1Item5 = document.createElement('li');
-const list1Item5Img = document.createElement('img');
-list1Item5Img.setAttribute('src', jsLogo);
-list1Item5.appendChild(list1Item5Img);
-techStackList1.appendChild(list1Item5);
+const listItem5 = document.createElement('li');
+const listItem5Img = document.createElement('img');
+listItem5Img.setAttribute('src', jsLogo);
+listItem5.appendChild(listItem5Img);
+techStackList.appendChild(listItem5);
 
-const list1Item6 = document.createElement('li');
-list1Item6.innerText = 'JavaScript';
-techStackList1.appendChild(list1Item6);
+const listItem6 = document.createElement('li');
+listItem6.innerText = 'JavaScript';
+techStackList.appendChild(listItem6);
 
-const list1Item7 = document.createElement('li');
-const list1Item7Img = document.createElement('img');
-list1Item7Img.setAttribute('src', pythonLogo);
-list1Item7.appendChild(list1Item7Img);
-techStackList1.appendChild(list1Item7);
+const listItem7 = document.createElement('li');
+const listItem7Img = document.createElement('img');
+listItem7Img.setAttribute('src', pythonLogo);
+listItem7.appendChild(listItem7Img);
+techStackList.appendChild(listItem7);
 
-const list1Item8 = document.createElement('li');
-list1Item8.innerText = 'Python';
-techStackList1.appendChild(list1Item8);
+const listItem8 = document.createElement('li');
+listItem8.innerText = 'Python';
+techStackList.appendChild(listItem8);
 
-const list1Item9 = document.createElement('li');
-const list1Item9Img = document.createElement('img');
-list1Item9Img.setAttribute('src', javaLogo);
-list1Item9.appendChild(list1Item9Img);
-techStackList1.appendChild(list1Item9);
+const listItem9 = document.createElement('li');
+const listItem9Img = document.createElement('img');
+listItem9Img.setAttribute('src', javaLogo);
+listItem9.appendChild(listItem9Img);
+techStackList.appendChild(listItem9);
 
-const list1Item10 = document.createElement('li');
-list1Item10.innerText = 'Java';
-techStackList1.appendChild(list1Item10);
+const listItem10 = document.createElement('li');
+listItem10.innerText = 'Java';
+techStackList.appendChild(listItem10);
 
-const list1Item11 = document.createElement('li');
-const list1Item11Img = document.createElement('img');
-list1Item11Img.setAttribute('src', cppLogo);
-list1Item11.appendChild(list1Item11Img);
-techStackList1.appendChild(list1Item11);
+const listItem11 = document.createElement('li');
+const listItem11Img = document.createElement('img');
+listItem11Img.setAttribute('src', cppLogo);
+listItem11.appendChild(listItem11Img);
+techStackList.appendChild(listItem11);
 
-const list1Item12 = document.createElement('li');
-list1Item12.innerText = 'C++';
-techStackList1.appendChild(list1Item12);
+const listItem12 = document.createElement('li');
+listItem12.innerText = 'C++';
+techStackList.appendChild(listItem12);
 
-const list1Item13 = document.createElement('li');
-const list1Item13Img = document.createElement('img');
-list1Item13Img.setAttribute('src', csharpLogo);
-list1Item13.appendChild(list1Item13Img);
-techStackList1.appendChild(list1Item13);
+const listItem13 = document.createElement('li');
+const listItem13Img = document.createElement('img');
+listItem13Img.setAttribute('src', csharpLogo);
+listItem13.appendChild(listItem13Img);
+techStackList.appendChild(listItem13);
 
-const list1Item14 = document.createElement('li');
-list1Item14.innerText = 'C#';
-techStackList1.appendChild(list1Item14);
+const listItem14 = document.createElement('li');
+listItem14.innerText = 'C#';
+techStackList.appendChild(listItem14);
 
-techStackList1Container.appendChild(techStackList1);
-export {techStackList1Container, addAnimation};
+techStackListContainer.appendChild(techStackList);
+export default techStackListContainer;

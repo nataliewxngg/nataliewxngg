@@ -210,9 +210,12 @@ article #profile { display: none; }
 
     flex-wrap: nowrap;
     width: fit-content;
-    animation: scroll 20s linear infinite;
 }
-.scroller:hover ul { 
+
+#tech-stack-list-1 { animation: scroll 25s linear infinite; }
+#tech-stack-list-2 { animation: scroll 22s linear infinite;}
+
+#tech-stack-list-1:hover, #tech-stack-list-2:hover { 
     animation-play-state: paused; 
     cursor: default;
 }
