@@ -3,6 +3,7 @@ import about from './about.js';
 
 import techStackListContainer from '../components/techstack-list-1.js'
 import techStackList2Container from '../components/techstack-list-2.js';
+import projectsContainer from '../components/projects.js';
 
 export default function Home() {
     // Set page title
@@ -79,7 +80,11 @@ export default function Home() {
     projectsSection.setAttribute('id', 'projects');
     const projectsTitle = document.createElement('h2');
     projectsTitle.innerText = 'Projects';
+    const projectsLearnMore = document.createElement('p');
+    projectsLearnMore.innerText = 'Learn more';
     projectsSection.appendChild(projectsTitle);
+    projectsSection.appendChild(projectsLearnMore);
+    projectsSection.appendChild(projectsContainer);
     content.appendChild(projectsSection);
 
     // About
