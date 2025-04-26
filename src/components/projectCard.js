@@ -1,8 +1,9 @@
-const projectsContainer = document.createElement('div');
-projectsContainer.setAttribute('id', 'projects-container');
+import pageLoad from '../functions/pageLoad.js'; 
 
-export default function projectCard(projectName, projectDesc) {
+export default function projectCard(id, projectName, projectDesc, projectLink) {
     const project = document.createElement('div');
+    project.setAttribute('id', id);
+    project.setAttribute('class', 'project-card');
     
     const projectDescContainer = document.createElement('div');
     projectDescContainer.setAttribute('class', 'project-desc');
@@ -13,10 +14,25 @@ export default function projectCard(projectName, projectDesc) {
     const projectDescText = document.createElement('p');
     projectDescText.innerText = projectDesc;
 
+    const projectLearnMore = document.createElement('button');
+    projectLearnMore.innerText = 'Learn more';
+    projectLearnMore.style.display = 'none';
+
     projectDescContainer.appendChild(projectTitle);
     projectDescContainer.appendChild(projectDescText);
+    projectDescContainer.appendChild(projectLearnMore);
 
-    project.setAttribute('class', 'project-card');
+    project.addEventListener('mouseover', () => {
+        projectLearnMore.style.display = 'block';
+    });
+    project.addEventListener('mouseout', () => {
+        projectLearnMore.style.display = 'none';
+    });
+    project.addEventListener('click', () => {
+        pageLoad(); 
+        projectLink();
+    });
+
     project.appendChild(projectDescContainer);
     return project;
 }

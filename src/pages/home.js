@@ -1,6 +1,10 @@
 import pageLoad from '../functions/pageLoad.js';
 import about from './about.js';
 
+import project1Page from './projects/project1.js';
+import project2Page from './projects/project2.js';
+import project3Page from './projects/project3.js';
+
 import techStackListContainer from '../components/techstack-list-1.js'
 import techStackList2Container from '../components/techstack-list-2.js';
 
@@ -85,12 +89,9 @@ export default function Home() {
     const projectsContainer = document.createElement('div');
     projectsContainer.setAttribute('id', 'projects-container');
     
-    const project1Card = project1('Calculator', 'This is a description of project 1.');
-    project1Card.setAttribute('id', 'project1');
-    const project2Card = project2('Etch-a-Sketch', 'This is a description of project 2.');
-    project2Card.setAttribute('id', 'project2');
-    const project3Card = project3('Blinky-ON!', 'This is a description of project 3.');
-    project3Card.setAttribute('id', 'project3');
+    const project1Card = project1('project1', 'Calculator', 'This is a description of project 1.', project1Page);
+    const project2Card = project2('project2', 'Etch-a-Sketch', 'This is a description of project 2.', project2Page);
+    const project3Card = project3('project3', 'Blinky-ON!', 'This is a description of project 3.', project3Page);
 
     projectsContainer.appendChild(project1Card);
     projectsContainer.appendChild(project2Card);

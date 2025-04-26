@@ -239,6 +239,12 @@ section > p {
     font-size: 0.9rem;
     color: var(--primary-color);
     justify-self: right;
+
+    transition: var(--default-transition);
+}
+section > p:hover {
+    cursor: pointer;
+    color: var(--accent-color);
 }
 
 #projects-container {
