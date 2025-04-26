@@ -3,7 +3,10 @@ import about from './about.js';
 
 import techStackListContainer from '../components/techstack-list-1.js'
 import techStackList2Container from '../components/techstack-list-2.js';
-import projectsContainer from '../components/projects.js';
+
+import project1 from '../components/projectCard.js';
+import project2 from '../components/projectCard.js';
+import project3 from '../components/projectCard.js';
 
 export default function Home() {
     // Set page title
@@ -78,10 +81,26 @@ export default function Home() {
     // Projects
     const projectsSection = document.createElement('section');
     projectsSection.setAttribute('id', 'projects');
+
+    const projectsContainer = document.createElement('div');
+    projectsContainer.setAttribute('id', 'projects-container');
+    
+    const project1Card = project1('Calculator', 'This is a description of project 1.');
+    project1Card.setAttribute('id', 'project1');
+    const project2Card = project2('Etch-a-Sketch', 'This is a description of project 2.');
+    project2Card.setAttribute('id', 'project2');
+    const project3Card = project3('Blinky-ON!', 'This is a description of project 3.');
+    project3Card.setAttribute('id', 'project3');
+
+    projectsContainer.appendChild(project1Card);
+    projectsContainer.appendChild(project2Card);
+    projectsContainer.appendChild(project3Card);
+
     const projectsTitle = document.createElement('h2');
     projectsTitle.innerText = 'Projects';
     const projectsLearnMore = document.createElement('p');
     projectsLearnMore.innerText = 'Learn more';
+
     projectsSection.appendChild(projectsTitle);
     projectsSection.appendChild(projectsLearnMore);
     projectsSection.appendChild(projectsContainer);

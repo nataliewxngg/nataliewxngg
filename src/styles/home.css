@@ -259,16 +259,22 @@ section > p {
     background-color: azure;
     border-radius: 10px;
     transition: var(--default-transition);
-    box-shadow: inset 5px 5px 50px 20px rgba(0,0,0,0.8);
+    box-shadow: inset 0px 20px 20px -10px rgba(0,0,0,0.5),
+                inset 0px -70px 50px -10px rgba(0,0,0,0.5); 
 }
 .project-card:hover {
     cursor: pointer;
-    border-bottom: 1px solid var(--primary-color);
 }
 
-#project1 { background: no-repeat center/cover url('../assets/project1.png'); }
-#project2 { background: no-repeat center/cover url('../assets/project2.png'); }
-#project3 { background: no-repeat center/cover url('../assets/project3.png'); }
+#project1 { background: no-repeat center/100% url('../assets/project1.png'); }
+#project2 { background: no-repeat center/110% url('../assets/project2.png'); }
+#project3 { background: no-repeat center/110% url('../assets/project3.png'); }
+#project1:hover{
+    background-size: 110%;
+}
+#project2:hover, #project3:hover {
+    background-size: 120%;
+}
 
 .project-desc {
     position: absolute;
@@ -309,7 +315,7 @@ section > p {
     #projects-container {
         grid-template-rows: repeat(2, 230px);
         grid-template-columns: 1fr;
-        height: calc(460px + 1rem);
+        height: calc(690px + 2rem);
     }
 
     #description { width: 100%; }
