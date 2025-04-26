@@ -3,5 +3,5 @@ export default function pageLoad() {
     content.innerHTML = '';
 
     const buttons = document.querySelectorAll('nav button');
-    buttons.forEach(button => button.classList.remove('active'))
+    buttons.forEach(button => button.classList.remove('active'));
 }

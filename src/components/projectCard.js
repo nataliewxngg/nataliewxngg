@@ -22,12 +22,15 @@ export default function projectCard(id, projectName, projectDesc, projectLink) {
     projectDescContainer.appendChild(projectDescText);
     projectDescContainer.appendChild(projectLearnMore);
 
+    // Add hover effect (to show/hide the learn more button)
     project.addEventListener('mouseover', () => {
         projectLearnMore.style.display = 'block';
     });
     project.addEventListener('mouseout', () => {
         projectLearnMore.style.display = 'none';
     });
+
+    // Add click event to redirect to respective project page
     project.addEventListener('click', () => {
         pageLoad(); 
         projectLink();
