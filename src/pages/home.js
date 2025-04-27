@@ -90,9 +90,9 @@ export default function Home() {
 
     const projectsContainer = document.createElement('div');
     projectsContainer.setAttribute('id', 'projects-container');
-    const project1Card = project1('project1', 'Calculator', 'Simple calculator built with HTML, CSS, and JavaScript', project1Page);
-    const project2Card = project2('project2', 'Etch-a-Sketch', 'This is a description of project 2.', project2Page);
-    const project3Card = project3('project3', 'Blinky-ON!', 'This is a description of project 3.', project3Page);
+    const project1Card = project1('project1', 'Calculator', 'Simple calculator built with HTML, CSS, and JavaScript.', project1Page);
+    const project2Card = project2('project2', 'Etch-a-Sketch', 'Etch-a-Sketch built with HTML, CSS, and JavaScript.', project2Page);
+    const project3Card = project3('project3', 'Blinky-ON!', 'A single-player traffic racing game engineered with Java Swing.', project3Page);
     projectsContainer.appendChild(project1Card);
     projectsContainer.appendChild(project2Card);
     projectsContainer.appendChild(project3Card);
