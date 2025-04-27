@@ -12,6 +12,7 @@
     --outline-color: #2b2b2b;
 
     --default-transition: all 0.4s ease-in-out;
+    --fast-transition: all 0.3s ease-in-out;
 
     --primary-font: 'Inter', sans-serif;
 }
@@ -244,7 +245,7 @@ section > p {
 }
 section > p:hover {
     cursor: pointer;
-    color: var(--accent-color);
+    opacity: 60%;
 }
 
 #projects-container {
@@ -254,13 +255,15 @@ section > p:hover {
     
     gap: 1rem;
     grid-auto-rows: 230px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     height: 230px;
     overflow: hidden;
 }
 
 .project-card {
     position: relative;
+
+    overflow: hidden;
 
     background-color: azure;
     border-radius: 10px;
@@ -270,11 +273,16 @@ section > p:hover {
 }
 .project-card:hover {
     cursor: pointer;
+    box-shadow: inset 0px 30px 50px -10px rgba(0,0,0,0.5),
+                inset 0px -80px 80px -10px rgba(0,0,0,0.5); 
+}
+.project-card:hover .project-desc {
+    transform: translateY(-45px);
 }
 
-#project1 { background: no-repeat center/100% url('../assets/project1.png'); }
-#project2 { background: no-repeat center/110% url('../assets/project2.png'); }
-#project3 { background: no-repeat center/110% url('../assets/project3.png'); }
+#project1 { background: no-repeat center/100% url('../assets/project1-bg.png'); }
+#project2 { background: no-repeat center/110% url('../assets/project2-bg.png'); }
+#project3 { background: no-repeat center/110% url('../assets/project3-bg.png'); }
 #project1:hover{
     background-size: 110%;
 }
@@ -284,12 +292,44 @@ section > p:hover {
 
 .project-desc {
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
 
     width: 100%;
     border-radius: 0 0 10px 10px;
     padding: 0.5rem 1rem;
+
+    transition: var(--fast-transition);
 }
+
+.project-desc > p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    opacity: 80%;
+}
+
+.project-desc button {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+
+    font-size: 0.8rem;
+    padding: 0.2rem 1rem;
+    margin: 1rem 0;
+
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    opacity: 80%;
+
+    transition: var(--default-transition);
+}
+.project-desc button:hover {
+    cursor: pointer;
+    opacity: 60%;
+}
+
+.project-desc button img { width: 0.8rem; }
 
 @keyframes scroll {
     to { transform: translate(calc(-50% - 0.5rem)); }

@@ -1,4 +1,5 @@
 import pageLoad from '../functions/pageLoad.js'; 
+import rightArrow from '../assets/right-arrow.svg';
 
 export default function projectCard(id, projectName, projectDesc, projectLink) {
     const project = document.createElement('div');
@@ -15,20 +16,16 @@ export default function projectCard(id, projectName, projectDesc, projectLink) {
     projectDescText.innerText = projectDesc;
 
     const projectLearnMore = document.createElement('button');
-    projectLearnMore.innerText = 'Learn more';
-    projectLearnMore.style.display = 'none';
+    const projectLearnMoreText = document.createElement('p');
+    projectLearnMoreText.innerText = 'Learn More';
+    const projectLearnMoreSVG = document.createElement('img');
+    projectLearnMoreSVG.setAttribute('src', rightArrow);
+    projectLearnMore.appendChild(projectLearnMoreText);
+    projectLearnMore.appendChild(projectLearnMoreSVG);
 
     projectDescContainer.appendChild(projectTitle);
     projectDescContainer.appendChild(projectDescText);
     projectDescContainer.appendChild(projectLearnMore);
-
-    // Add hover effect (to show/hide the learn more button)
-    project.addEventListener('mouseover', () => {
-        projectLearnMore.style.display = 'block';
-    });
-    project.addEventListener('mouseout', () => {
-        projectLearnMore.style.display = 'none';
-    });
 
     // Add click event to redirect to respective project page
     project.addEventListener('click', () => {

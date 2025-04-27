@@ -1,16 +1,18 @@
-import pageLoad from '../functions/pageLoad.js';
-import about from './about.js';
+import pageLoad from '../functions/pageLoad';
 
-import project1Page from './projects/project1.js';
-import project2Page from './projects/project2.js';
-import project3Page from './projects/project3.js';
+import aboutPage from './about';
+import projectsPage from './projects';
 
-import techStackListContainer from '../components/techstack-list-1.js'
-import techStackList2Container from '../components/techstack-list-2.js';
+import project1Page from './projects/project1';
+import project2Page from './projects/project2';
+import project3Page from './projects/project3';
 
-import project1 from '../components/projectCard.js';
-import project2 from '../components/projectCard.js';
-import project3 from '../components/projectCard.js';
+import techStackListContainer from '../components/techstack-list-1'
+import techStackList2Container from '../components/techstack-list-2';
+
+import project1 from '../components/projectCard';
+import project2 from '../components/projectCard';
+import project3 from '../components/projectCard';
 
 export default function Home() {
     // Set page title
@@ -61,7 +63,7 @@ export default function Home() {
     aboutButton.setAttribute('id', 'about-button');
     aboutButton.innerText = 'About';
     buttons.appendChild(aboutButton);
-    aboutButton.addEventListener('click', () => { pageLoad(); about(); });
+    aboutButton.addEventListener('click', () => { pageLoad(); aboutPage(); });
     const contactMeButton = document.createElement('button');
     contactMeButton.setAttribute('id', 'contact-me-button');
     contactMeButton.innerText = 'Contact Me';
@@ -88,11 +90,9 @@ export default function Home() {
 
     const projectsContainer = document.createElement('div');
     projectsContainer.setAttribute('id', 'projects-container');
-    
-    const project1Card = project1('project1', 'Calculator', 'This is a description of project 1.', project1Page);
+    const project1Card = project1('project1', 'Calculator', 'Simple calculator built with HTML, CSS, and JavaScript', project1Page);
     const project2Card = project2('project2', 'Etch-a-Sketch', 'This is a description of project 2.', project2Page);
     const project3Card = project3('project3', 'Blinky-ON!', 'This is a description of project 3.', project3Page);
-
     projectsContainer.appendChild(project1Card);
     projectsContainer.appendChild(project2Card);
     projectsContainer.appendChild(project3Card);
@@ -101,6 +101,11 @@ export default function Home() {
     projectsTitle.innerText = 'Projects';
     const projectsLearnMore = document.createElement('p');
     projectsLearnMore.innerText = 'Learn more';
+
+    projectsLearnMore.addEventListener('click', () => {
+        pageLoad();
+        projectsPage();
+    });
 
     projectsSection.appendChild(projectsTitle);
     projectsSection.appendChild(projectsLearnMore);
