@@ -148,7 +148,7 @@ article #profile { display: none; }
     border-color: rgb(33, 33, 33);
 }
 
-#content header #contact-me-button { 
+#content header .contact-me-button { 
     display: flex;
     gap: 0.8rem;
     align-items: center;
@@ -156,15 +156,15 @@ article #profile { display: none; }
 
     position: relative; 
 }
-#content header #contact-me-button:hover { background-color: rgb(31, 31, 31); }
+#content header .contact-me-button:hover { background-color: rgb(31, 31, 31); }
 
 @property --angle { 
     syntax: '<angle>';
     inherits: false;
     initial-value: 0deg;
 }
-#content header #contact-me-button::after, 
-#content header #contact-me-button::before {
+#content header .contact-me-button::after, 
+#content header .contact-me-button::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -179,13 +179,13 @@ article #profile { display: none; }
 
     animation: 3s spin linear infinite;
 }
-#content header #contact-me-button::before {
+#content header .contact-me-button::before {
     filter: blur(2rem);
     opacity: 0.3;
 
     transition: var(--default-transition);
 }
-#content header #contact-me-button:hover::before { opacity: 0.1; }
+#content header .contact-me-button:hover::before { opacity: 0.1; }
 
 /* Section styles */
 #content section h2 { margin-bottom: 1rem; }
@@ -332,6 +332,42 @@ section > p:hover {
 
 .project-desc button img { width: 0.8rem; }
 
+/* Get in Touch with Me Styles */
+section#get-in-touch {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+section#get-in-touch h2 {
+    justify-self: start;
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+section#get-in-touch button {
+    color: var(--text-color);
+    fill: var(--text-color);
+    background: none;
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: var(--default-transition);
+}
+section#get-in-touch button:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+    fill: var(--primary-color);
+    transform: scale(1.05);
+}
+
+section#get-in-touch button svg {
+    width: 3rem;
+    vertical-align: middle;
+}
+
 @keyframes scroll {
     to { transform: translate(calc(-50% - 0.5rem)); }
 }
@@ -358,7 +394,7 @@ section > p:hover {
         margin-bottom: 2rem;
     }
 
-    /* Projects Style */
+    /* Projects Styles */
     #projects-container {
         grid-template-rows: repeat(2, 230px);
         grid-template-columns: 1fr;

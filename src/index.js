@@ -32,11 +32,3 @@ buttons.forEach(button => {
         else if (page === 'about-button') about();
     });
 });
-
-const aboutButtons = document.querySelectorAll('#about-button');
-aboutButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        pageLoad();
-        about();
-    });
-});
