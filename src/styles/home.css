@@ -255,8 +255,8 @@ section > p:hover {
     
     gap: 1rem;
     grid-auto-rows: 230px;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    height: 230px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    height: calc(460px + 1rem);
     overflow: hidden;
 }
 
@@ -283,7 +283,8 @@ section > p:hover {
 #project1 { background: no-repeat center/100% url('../assets/project1-bg.png'); }
 #project2 { background: no-repeat center/110% url('../assets/project2-bg.png'); }
 #project3 { background: no-repeat center/110% url('../assets/project3-bg.png'); }
-#project1:hover{
+#project4 { background: no-repeat center/100% url('../assets/project4-bg.png'); }
+#project1:hover, #project4:hover {
     background-size: 110%;
 }
 #project2:hover, #project3:hover {
