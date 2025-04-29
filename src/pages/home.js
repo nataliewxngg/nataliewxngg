@@ -38,7 +38,11 @@ export default function Home() {
     const location = document.createElement('div');
     location.setAttribute('id', 'location');
 
-    const locationSVG = svgElementCreator('http://www.w3.org/2000/svg', '0 0 24 24', 'M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z');
+    const locationSVG = svgElementCreator(
+        'http://www.w3.org/2000/svg', 
+        '0 0 24 24', 
+        'M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z'
+    );
     const locationText = document.createElement('p');
     locationText.innerText = 'Markham, Ontario, Canada';
     location.appendChild(locationSVG);
@@ -56,7 +60,10 @@ export default function Home() {
     aboutButton.setAttribute('id', 'about-button');
     aboutButton.innerText = 'About';
     buttons.appendChild(aboutButton);
-    aboutButton.addEventListener('click', () => { pageLoad(); aboutPage(); });
+    aboutButton.addEventListener('click', () => { 
+        pageLoad(); 
+        aboutPage(); 
+    });
     const contactMeButton = document.createElement('button');
     contactMeButton.classList.add('email-button');
     contactMeButton.innerText = 'Contact Me';
