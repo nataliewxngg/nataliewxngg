@@ -25,6 +25,7 @@ export default function Home() {
 
     // Header
     const header = document.createElement('header');
+    header.setAttribute('id', 'home-hero-container')
 
     const greeting = document.createElement('h1');
     greeting.setAttribute('id', 'greeting');

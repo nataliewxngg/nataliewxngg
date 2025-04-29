@@ -78,7 +78,7 @@ footer svg:hover {
     cursor: pointer;
 }
 
-/* article styles */
+/* Article styles */
 article { 
     padding: 8rem 18% 0 18%; 
 
@@ -93,7 +93,8 @@ article #profile { display: none; }
     gap: 2rem;
 }
 
-#content header {
+/* Hero styles */
+#home-hero-container {
     display: flex;
     flex-direction: column;
 
@@ -123,14 +124,13 @@ article #profile { display: none; }
 
 #description { width: 85%; }
 
-#content header #buttons-container {
+#home-hero-container #buttons-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin: 0.3rem 0;
 }
-
-#content header button {
+#home-hero-container button {
     background: none;
     border: 1px solid var(--outline-color);
     border-radius: 5px;
@@ -140,7 +140,7 @@ article #profile { display: none; }
 
     transition: var(--default-transition);
 }
-#content header button:hover {
+#home-hero-container button:hover {
     cursor: pointer;
     color: rgb(160, 160, 160); 
     
@@ -148,7 +148,7 @@ article #profile { display: none; }
     border-color: rgb(33, 33, 33);
 }
 
-#content header .contact-me-button { 
+#home-hero-container .email-button { 
     display: flex;
     gap: 0.8rem;
     align-items: center;
@@ -156,15 +156,14 @@ article #profile { display: none; }
 
     position: relative; 
 }
-#content header .contact-me-button:hover { background-color: rgb(31, 31, 31); }
-
+#home-hero-container .email-button:hover { background-color: rgb(31, 31, 31); }
 @property --angle { 
     syntax: '<angle>';
     inherits: false;
     initial-value: 0deg;
 }
-#content header .contact-me-button::after, 
-#content header .contact-me-button::before {
+#home-hero-container .email-button::after, 
+#home-hero-container .email-button::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -179,13 +178,13 @@ article #profile { display: none; }
 
     animation: 3s spin linear infinite;
 }
-#content header .contact-me-button::before {
+#home-hero-container .email-button::before {
     filter: blur(2rem);
     opacity: 0.3;
 
     transition: var(--default-transition);
 }
-#content header .contact-me-button:hover::before { opacity: 0.1; }
+#home-hero-container.cemail-button:hover::before { opacity: 0.1; }
 
 /* Section styles */
 #content section h2 { margin-bottom: 1rem; }
