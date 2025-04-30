@@ -25,10 +25,10 @@ export default function Home() {
 
     // Header
     const header = document.createElement('header');
-    header.setAttribute('id', 'home-hero-container')
+    header.setAttribute('id', 'header-container')
+    header.classList.add('home');
 
     const greeting = document.createElement('h1');
-    greeting.setAttribute('id', 'greeting');
     const greetingSpan = document.createElement('span');
     greeting.innerText = 'Hey, I\'m Natalie, \nA ';
     greetingSpan.innerText = 'Full-Stack Developer.';
@@ -36,7 +36,7 @@ export default function Home() {
     header.appendChild(greeting);
 
     const location = document.createElement('div');
-    location.setAttribute('id', 'location');
+    location.setAttribute('id', 'location-container');
 
     const locationSVG = svgElementCreator(
         'http://www.w3.org/2000/svg', 
@@ -50,7 +50,6 @@ export default function Home() {
     header.appendChild(location);
 
     const description = document.createElement('p');
-    description.setAttribute('id', 'description');
     description.innerText = 'I\'m an 18 year old full-stack developer with a passion for creating web applications and discovering new technologies. I love to learn and am always seeking new challenges.';
     header.appendChild(description);
 
@@ -75,7 +74,8 @@ export default function Home() {
 
     // My Tech Stack
     const techStackSection = document.createElement('section');
-    techStackSection.setAttribute('id', 'tech-stack');
+    techStackSection.setAttribute('id', 'tech-stack-container');
+    techStackSection.classList.add('home');
     const techStackTitle = document.createElement('h2');
     techStackTitle.innerText = 'My Tech Stack';
 
