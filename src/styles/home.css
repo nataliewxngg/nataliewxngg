@@ -187,7 +187,7 @@ article #profile { display: none; }
 .home#header-container.cemail-button:hover::before { opacity: 0.1; }
 
 /* Section styles */
-.home #content section h2 { margin-bottom: 1rem; }
+#content section h2 { margin-bottom: 1rem; }
 
 /* Tech Stack styles */
 section.home#tech-stack-container { overflow: hidden; }
@@ -227,13 +227,13 @@ section.home#tech-stack-container .scroller img {
 }
 
 /* Projects styles */
-section#projects {
+section.home#projects-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
-section#projects > p {
+section.home#projects-section > p {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
     color: var(--primary-color);
@@ -241,12 +241,12 @@ section#projects > p {
 
     transition: var(--default-transition);
 }
-section#projects > p:hover {
+section.home#projects-section > p:hover {
     cursor: pointer;
     opacity: 60%;
 }
 
-section#projects #projects-container {
+section.home#projects-section #projects-container {
     grid-area: 2 / 1 / 3 / 3;
 
     display: grid;
@@ -258,7 +258,7 @@ section#projects #projects-container {
     overflow: hidden;
 }
 
-section#projects #projects-container .project-card {
+section.home#projects-section #projects-container .project-card {
     position: relative;
 
     overflow: hidden;
@@ -269,25 +269,27 @@ section#projects #projects-container .project-card {
     box-shadow: inset 0px 20px 20px -10px rgba(0,0,0,0.5),
                 inset 0px -70px 50px -10px rgba(0,0,0,0.5); 
 }
-section#projects #projects-container .project-card:hover {
+section.home#projects-section #projects-container .project-card:hover {
     cursor: pointer;
     box-shadow: inset 0px 30px 50px -10px rgba(0,0,0,0.5),
                 inset 0px -80px 80px -10px rgba(0,0,0,0.5); 
 }
-section#projects #projects-container .project-card:hover .project-desc { transform: translateY(-45px); }
+section.home#projects-section #projects-container .project-card:hover .project-desc { transform: translateY(-45px); }
 
-#project1 { background: no-repeat center/100% url('../assets/project1-bg.png'); }
-#project2 { background: no-repeat center/110% url('../assets/project2-bg.png'); }
-#project3 { background: no-repeat center/110% url('../assets/project3-bg.png'); }
-#project4 { background: no-repeat center/100% url('../assets/project4-bg.png'); }
-#project1:hover, #project4:hover {
+section.home#projects-section #project1 { background: no-repeat center/100% url('../assets/project1-bg.png'); }
+section.home#projects-section #project2 { background: no-repeat center/110% url('../assets/project2-bg.png'); }
+section.home#projects-section #project3 { background: no-repeat center/110% url('../assets/project3-bg.png'); }
+section.home#projects-section #project4 { background: no-repeat center/100% url('../assets/project4-bg.png'); }
+section.home#projects-section #project1:hover, 
+section.home#projects-section #project4:hover {
     background-size: 110%;
 }
-#project2:hover, #project3:hover {
+section.home#projects-section #project2:hover, 
+section.home#projects-section #project3:hover {
     background-size: 120%;
 }
 
-.project-desc {
+section.home#projects-section .project-desc {
     position: absolute;
     bottom: -50px;
 
@@ -298,13 +300,13 @@ section#projects #projects-container .project-card:hover .project-desc { transfo
     transition: var(--fast-transition);
 }
 
-.project-desc > p {
+section.home#projects-section .project-desc > p {
     margin: 0.2rem 0;
     font-size: 0.9rem;
     opacity: 80%;
 }
 
-.project-desc button {
+section.home#projects-section .project-desc button {
     display: flex;
     gap: 0.2rem;
     align-items: center;
@@ -321,12 +323,12 @@ section#projects #projects-container .project-card:hover .project-desc { transfo
 
     transition: var(--default-transition);
 }
-.project-desc button:hover {
+section.home#projects-section .project-desc button:hover {
     cursor: pointer;
     opacity: 60%;
 }
 
-.project-desc button img { width: 0.8rem; }
+section.home#projects-section .project-desc button img { width: 0.8rem; }
 
 /* Get in Touch with Me Styles */
 section#get-in-touch {
@@ -394,7 +396,7 @@ section#get-in-touch button svg {
     .home#header-container > p { width: 100%; }
 
     /* Projects Styles */
-    section#projects #projects-container {
+    section.home#projects-section #projects-container {
         grid-template-rows: repeat(2, 230px);
         grid-template-columns: 1fr;
         height: calc(690px + 2rem);

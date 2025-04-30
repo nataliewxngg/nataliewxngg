@@ -1,0 +1,50 @@
+/* Header styles */
+.projects#header-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.projects#header-container > h1 { font-size: clamp(2rem, 5vw, 3rem); }
+
+.projects#header-container p { 
+    width: 85%; 
+    color: var(--primary-color);
+}
+
+/* Projects container styles */
+section.projects#projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 350px;
+    gap: 1rem;
+}
+
+section.projects#projects-container .project-card {
+    /* height: 100px; */
+    border: 1px solid var(--outline-color);
+
+    transition: var(--fast-transition);
+}
+section.projects#projects-container .project-card:hover {
+
+}
+
+section.projects#projects-container #project1 { background: no-repeat center/100% url('../assets/project1-bg.png'); }
+section.projects#projects-container #project2 { background: no-repeat center/110% url('../assets/project2-bg.png'); }
+section.projects#projects-container #project3 { background: no-repeat center/110% url('../assets/project3-bg.png'); }
+section.projects#projects-container #project4 { background: no-repeat center/100% url('../assets/project4-bg.png'); }
+section.projects#projects-container #project1:hover, 
+section.projects#projects-container #project4:hover {
+    background-size: 110%;
+}
+section.projects#projects-container #project2:hover, 
+section.projects#projects-container #project3:hover {
+    background-size: 120%;
+}
+
+@media only screen and (max-width: 900px) {
+    /* Header styles */
+    .projects#header-container p { width: 100%; }
+}

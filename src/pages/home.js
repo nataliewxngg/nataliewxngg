@@ -86,7 +86,8 @@ export default function Home() {
 
     // Projects
     const projectsSection = document.createElement('section');
-    projectsSection.setAttribute('id', 'projects');
+    projectsSection.setAttribute('id', 'projects-section');
+    projectsSection.classList.add('home');
 
     const projectsContainer = document.createElement('div');
     projectsContainer.setAttribute('id', 'projects-container');
