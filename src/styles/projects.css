@@ -17,18 +17,28 @@
 section.projects#projects-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: 350px;
-    gap: 1rem;
+    gap: 1.5rem;
+    overflow: hidden;
 }
 
 section.projects#projects-container .project-card {
-    /* height: 100px; */
     border: 1px solid var(--outline-color);
+    border-radius: 10px;
+    overflow: hidden;
+
+    position: relative;
+
+    height: 0;;
+    padding-bottom: 50%;
 
     transition: var(--fast-transition);
+    box-shadow: inset 0px 20px 20px -10px rgba(0,0,0,0.5),
+                inset 0px -70px 50px -10px rgba(0,0,0,0.5); 
 }
 section.projects#projects-container .project-card:hover {
-
+    cursor: pointer;
+    box-shadow: inset 0px 30px 50px -10px rgba(0,0,0,0.5),
+                inset 0px -80px 80px -10px rgba(0,0,0,0.5);
 }
 
 section.projects#projects-container #project1 { background: no-repeat center/100% url('../assets/project1-bg.png'); }
@@ -43,6 +53,45 @@ section.projects#projects-container #project2:hover,
 section.projects#projects-container #project3:hover {
     background-size: 120%;
 }
+
+section.projects#projects-container .project-card:hover .project-desc { transform: translateY(-45px); }
+section.projects#projects-container .project-desc {
+    position: absolute;
+    bottom: -50px;
+    padding: 0.5rem 1rem;
+
+    transition: var(--fast-transition);
+}
+
+section.projects#projects-container .project-desc > p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    opacity: 80%;
+}
+
+section.projects#projects-container .project-desc button {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+
+    font-size: 0.8rem;
+    padding: 0.2rem 1rem;
+    margin: 1rem 0;
+
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    opacity: 80%;
+
+    transition: var(--default-transition);
+}
+section.projects#projects-container .project-desc button:hover {
+    cursor: pointer;
+    opacity: 60%;
+}
+
+section.projects#projects-container .project-desc button img { width: 0.8rem; }
 
 @media only screen and (max-width: 900px) {
     /* Header styles */
