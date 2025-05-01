@@ -39,20 +39,14 @@ section.projects#projects-container .project-card:hover {
     cursor: pointer;
     box-shadow: inset 0px 30px 50px -10px rgba(0,0,0,0.5),
                 inset 0px -80px 80px -10px rgba(0,0,0,0.5);
+
+    background-size: 110% !important;
 }
 
 section.projects#projects-container #project1 { background: no-repeat center/100% url('../assets/project1-bg.png'); }
-section.projects#projects-container #project2 { background: no-repeat center/110% url('../assets/project2-bg.png'); }
-section.projects#projects-container #project3 { background: no-repeat center/110% url('../assets/project3-bg.png'); }
+section.projects#projects-container #project2 { background: no-repeat center/100% url('../assets/project2-bg.png'); }
+section.projects#projects-container #project3 { background: no-repeat center/100% url('../assets/project3-bg.png'); }
 section.projects#projects-container #project4 { background: no-repeat center/100% url('../assets/project4-bg.png'); }
-section.projects#projects-container #project1:hover, 
-section.projects#projects-container #project4:hover {
-    background-size: 110%;
-}
-section.projects#projects-container #project2:hover, 
-section.projects#projects-container #project3:hover {
-    background-size: 120%;
-}
 
 section.projects#projects-container .project-card:hover .project-desc { transform: translateY(-45px); }
 section.projects#projects-container .project-desc {
