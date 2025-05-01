@@ -252,9 +252,7 @@ section.home#projects-section #projects-container {
     display: grid;
     
     gap: 1rem;
-    grid-auto-rows: 230px;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    height: calc(460px + 1rem);
     overflow: hidden;
 }
 
@@ -262,6 +260,8 @@ section.home#projects-section #projects-container .project-card {
     position: relative;
 
     overflow: hidden;
+    height: 0;
+    padding-bottom: 40%;;
 
     border-radius: 10px;
     transition: var(--default-transition);
@@ -396,8 +396,6 @@ section#get-in-touch button svg {
 
     /* Projects Styles */
     section.home#projects-section #projects-container {
-        grid-template-rows: repeat(2, 230px);
         grid-template-columns: 1fr;
-        height: calc(690px + 2rem);
     }
 }

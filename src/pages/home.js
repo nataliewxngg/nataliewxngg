@@ -4,8 +4,6 @@ import aboutPage from './about';
 import projectsPage from './projects';
 import project1Page from './projects/project1';
 import project2Page from './projects/project2';
-import project3Page from './projects/project3';
-import project4Page from './projects/project4';
 
 import techStackListContainer from '../components/techstack-list-1'
 import techStackList2Container from '../components/techstack-list-2';
@@ -93,12 +91,8 @@ export default function Home() {
     projectsContainer.setAttribute('id', 'projects-container');
     const project1Card = projectCardCreator('project1', 'Calculator', 'Simple calculator built with HTML, CSS, and JavaScript.', project1Page);
     const project2Card = projectCardCreator('project2', 'Etch-a-Sketch', 'Etch-a-Sketch built with HTML, CSS, and JavaScript.', project2Page);
-    const project3Card = projectCardCreator('project3', 'Blinky-ON!', 'A single-player traffic racing game engineered with Java Swing.', project3Page);
-    const project4Card = projectCardCreator('project4', 'Resistor Calculator', 'A Python GUI designed to calculate resistor values.', project4Page);
     projectsContainer.appendChild(project1Card);
     projectsContainer.appendChild(project2Card);
-    projectsContainer.appendChild(project3Card);
-    projectsContainer.appendChild(project4Card);
 
     const projectsTitle = document.createElement('h2');
     projectsTitle.innerText = 'Projects';
