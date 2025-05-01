@@ -1,4 +1,6 @@
 export default function pageLoad() {
+    window.scrollTo(0, 0);
+
     const content = document.getElementById('content');
     content.innerHTML = '';
 
