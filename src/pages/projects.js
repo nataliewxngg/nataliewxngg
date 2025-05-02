@@ -5,7 +5,6 @@ import project2Page from './projects/project2';
 import project3Page from './projects/project3';
 import project4Page from './projects/project4';
 
-
 export default function projects() {
     // Set page title
     const title = document.querySelector('title');

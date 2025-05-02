@@ -1,0 +1,66 @@
+/* Header styles */
+.about#header-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    align-items: center;
+}
+
+.about#header-container p#location {
+    /* background: red; */
+}
+
+.about#header-container h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.about#header-container h1#header-title {
+
+}
+
+.about#header-container p#header-desc {
+    /* background: orange; */
+}
+
+.about#header-container img#header-image {
+    width: 100%;    
+}
+
+/* Story styles */
+section.about#story-container {
+
+}
+
+section.about#story-container h2#story-title {
+
+}
+
+section.about#story-container p#story-desc {
+
+}
+
+/* Skills styles */
+section.about#skills-container {
+
+}
+
+section.about#skills-container h2#skills-title {
+
+}
+
+section.about#skills-container p#skills-desc {
+
+}
+
+/* Interests and Hobbies Styles */
+section.about#hobbies-container {
+
+}
+
+section.about#hobbies-container h2#hobbies-title {
+
+}
+
+section.about#hobbies-container p#hobbies-desc {
+
+}

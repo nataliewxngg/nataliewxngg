@@ -10,6 +10,7 @@ import about from './pages/about';
 import './styles/nav.css';
 import './styles/home.css';
 import './styles/projects.css';
+import './styles/about.css';
 
 firstLoad();
 
