@@ -38,10 +38,10 @@ export default function projects() {
     projectsSection.setAttribute('id', 'projects-container');
     projectsSection.classList.add('projects');
 
-    const project1Card = projectCardCreator('project1', 'Calculator', 'A simple calculator built with HTML, CSS, and JavaScript.', project1Page);
-    const project2Card = projectCardCreator('project2', 'Etch-a-Sketch', 'Etch-a-Sketch built with HTML, CSS, and JavaScript.', project2Page);
-    const project3Card = projectCardCreator('project3', 'Blinky-ON!', 'A single-player traffic racing game engineered with Java Swing.', project3Page);
-    const project4Card = projectCardCreator('project4', 'Resistor Calculator', 'A Python GUI designed to calculate resistor values', project4Page);
+    const project1Card = projectCardCreator('project1', 'Calculator', 'A simple calculator built with HTML, CSS, and JavaScript.', project1Page, 'https://nataliewxngg.github.io/calculator/');
+    const project2Card = projectCardCreator('project2', 'Etch-a-Sketch', 'Etch-a-Sketch built with HTML, CSS, and JavaScript.', project2Page, 'https://nataliewxngg.github.io/etch-a-sketch/');
+    const project3Card = projectCardCreator('project3', 'Blinky-ON!', 'A single-player traffic racing game engineered with Java Swing.', project3Page, 'https://github.com/nataliewxngg/blinky-on');
+    const project4Card = projectCardCreator('project4', 'Resistor Calculator', 'A Python GUI designed to calculate resistor values', project4Page, 'https://github.com/nataliewxngg/resistor-calculator');
 
     projectsSection.appendChild(project1Card);
     projectsSection.appendChild(project2Card);

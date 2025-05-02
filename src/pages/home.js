@@ -89,8 +89,8 @@ export default function Home() {
 
     const projectsContainer = document.createElement('div');
     projectsContainer.setAttribute('id', 'projects-container');
-    const project1Card = projectCardCreator('project1', 'Calculator', 'Simple calculator built with HTML, CSS, and JavaScript.', project1Page);
-    const project2Card = projectCardCreator('project2', 'Etch-a-Sketch', 'Etch-a-Sketch built with HTML, CSS, and JavaScript.', project2Page);
+    const project1Card = projectCardCreator('project1', 'Calculator', 'Simple calculator built with HTML, CSS, and JavaScript.', project1Page, 'https://nataliewxngg.github.io/calculator/');
+    const project2Card = projectCardCreator('project2', 'Etch-a-Sketch', 'Etch-a-Sketch built with HTML, CSS, and JavaScript.', project2Page, 'https://nataliewxngg.github.io/etch-a-sketch/');
     projectsContainer.appendChild(project1Card);
     projectsContainer.appendChild(project2Card);
 

@@ -1,7 +1,7 @@
 import pageLoad from '../functions/pageLoad.js'; 
 import rightArrow from '../assets/right-arrow.svg';
 
-export default function projectCard(id, projectName, projectDesc, projectLink) {
+export default function projectCard(id, projectName, projectDesc, projectLink, projectLinkAlt) {
     const project = document.createElement('div');
     project.setAttribute('id', id);
     project.setAttribute('class', 'project-card');
@@ -29,8 +29,9 @@ export default function projectCard(id, projectName, projectDesc, projectLink) {
 
     // Add click event to redirect to respective project page
     project.addEventListener('click', () => {
-        pageLoad(); 
-        projectLink();
+        // pageLoad(); 
+        // projectLink();
+        window.open(projectLinkAlt, '_blank');
     });
 
     project.appendChild(projectDescContainer);
