@@ -1,5 +1,7 @@
 import profileImage from '../assets/profile-pic.jpg';
 
+import chapter from '../components/chapter'
+
 export default function about() {
     // Set page title
     const title = document.querySelector('title');
@@ -52,12 +54,15 @@ export default function about() {
     storyTitle.setAttribute('id', 'story-title');
     storyTitle.innerText = 'My Story';
 
-    const storyDescription = document.createElement('p');
-    storyDescription.setAttribute('id', 'story-desc');
-    storyDescription.innerText = 'Story here.';
+    const story = document.createElement('div');
+    story.setAttribute('id', 'story');
+    story.appendChild(chapter(1, 'Chapter 1', 'Chapter 1 Content'));
+    story.appendChild(chapter(2, 'Chapter 2', 'Chapter 2 Content'));
+    story.appendChild(chapter(3, 'Chapter 3', 'Chapter 3 Content'));
+    story.appendChild(chapter(4, 'Chapter 4', 'Chapter 4 Content'));
 
     storySection.appendChild(storyTitle);
-    storySection.appendChild(storyDescription);
+    storySection.appendChild(story);
 
     content.appendChild(storySection);
 
