@@ -1,4 +1,3 @@
-import pageLoad from '../functions/pageLoad.js'; 
 import rightArrow from '../assets/right-arrow.svg';
 
 export default function projectCard(id, projectName, projectDesc, projectLink, projectLinkAlt) {

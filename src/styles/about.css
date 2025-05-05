@@ -99,8 +99,34 @@ section.about#skills-container h2#skills-title {
 
 }
 
-section.about#skills-container p#skills-desc {
+section.about#skills-container #skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
 
+section.about#skills-container #skills .skill-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid var(--outline-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+
+section.about#skills-container #skills .skill-card img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+section.about#skills-container #skills .skill-card h1 {
+
+}
+
+section.about#skills-container #skills .skill-card p {
+    color: var(--primary-color);
 }
 
 /* Interests and Hobbies Styles */

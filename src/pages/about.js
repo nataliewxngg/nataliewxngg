@@ -1,6 +1,15 @@
 import profileImage from '../assets/profile-pic.jpg';
 
-import chapter from '../components/chapter'
+import chapterCreator from '../components/chapter'
+import skillCardCreator from '../components/skillCard';
+
+import html5Logo from '../assets/techstack-logos/html5-icon.svg';
+import css3Logo from '../assets/techstack-logos/css3-icon.svg';
+import jsLogo from '../assets/techstack-logos/javascript-icon.svg';
+import pythonLogo from '../assets/techstack-logos/python-icon.svg';
+import javaLogo from '../assets/techstack-logos/java-icon.svg';
+import cppLogo from '../assets/techstack-logos/c++-icon.svg';
+import csharpLogo from '../assets/techstack-logos/csharp-icon.svg';
 
 export default function about() {
     // Set page title
@@ -56,10 +65,10 @@ export default function about() {
 
     const story = document.createElement('div');
     story.setAttribute('id', 'story');
-    story.appendChild(chapter(1, 'Chapter 1', 'Chapter 1 Content'));
-    story.appendChild(chapter(2, 'Chapter 2', 'Chapter 2 Content'));
-    story.appendChild(chapter(3, 'Chapter 3', 'Chapter 3 Content'));
-    story.appendChild(chapter(4, 'Chapter 4', 'Chapter 4 Content'));
+    story.appendChild(chapterCreator(1, 'Chapter 1', 'Chapter 1 Content'));
+    story.appendChild(chapterCreator(2, 'Chapter 2', 'Chapter 2 Content'));
+    story.appendChild(chapterCreator(3, 'Chapter 3', 'Chapter 3 Content'));
+    story.appendChild(chapterCreator(4, 'Chapter 4', 'Chapter 4 Content'));
 
     storySection.appendChild(storyTitle);
     storySection.appendChild(story);
@@ -75,12 +84,14 @@ export default function about() {
     skillsTitle.setAttribute('id', 'skills-title');
     skillsTitle.innerText = 'Skills';
 
-    const skillsDescription = document.createElement('p');
-    skillsDescription.setAttribute('id', 'skills-desc');
-    skillsDescription.innerText = 'Skills here.';
+    const skills = document.createElement('div');
+    skills.setAttribute('id', 'skills');
+    skills.appendChild(skillCardCreator('HTML', html5Logo, 'Standard markup language for creating web pages.'));
+    skills.appendChild(skillCardCreator('CSS', css3Logo, 'Style sheet language used to style web pages.'));
+    skills.appendChild(skillCardCreator('JavaScript', jsLogo, 'Programming language that enables interactive web pages.'));
 
     skillsSection.appendChild(skillsTitle);
-    skillsSection.appendChild(skillsDescription);
+    skillsSection.appendChild(skills);
 
     content.appendChild(skillsSection);
 
