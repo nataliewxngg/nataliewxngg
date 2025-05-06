@@ -138,8 +138,27 @@ section.about#hobbies-container h2#hobbies-title {
 
 }
 
-section.about#hobbies-container p#hobbies-desc {
+section.about#hobbies-container #hobbies {
 
+}
+
+section.about#hobbies-container #hobbies .hobby-card {
+    display: flex;
+}
+
+section.about#hobbies-container #hobbies .hobby-card.image-animation {
+    animation: enter-animation 0.8s 1;
+}
+
+@keyframes enter-animation {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
 }
 
 /* Mobile styles */

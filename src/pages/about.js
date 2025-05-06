@@ -2,6 +2,7 @@ import profileImage from '../assets/profile-pic.jpg';
 
 import chapterCreator from '../components/chapter'
 import skillCardCreator from '../components/skillCard';
+import hobbyCardCreator from '../components/hobbyCard';
 
 import html5Logo from '../assets/techstack-logos/html5-icon.svg';
 import css3Logo from '../assets/techstack-logos/css3-icon.svg';
@@ -10,6 +11,8 @@ import pythonLogo from '../assets/techstack-logos/python-icon.svg';
 import javaLogo from '../assets/techstack-logos/java-icon.svg';
 import cppLogo from '../assets/techstack-logos/c++-icon.svg';
 import csharpLogo from '../assets/techstack-logos/csharp-icon.svg';
+
+import profilePic from '../assets/profile-pic.jpg';
 
 export default function about() {
     // Set page title
@@ -105,12 +108,25 @@ export default function about() {
     hobbiesTitle.setAttribute('id', 'hobbies-title');
     hobbiesTitle.innerText = 'Interests and Hobbies';
 
-    const hobbiesDescription = document.createElement('p');
-    hobbiesDescription.setAttribute('id', 'hobbies-description');
-    hobbiesDescription.innerText = 'Hobbies here.';
+    const hobbies = document.createElement('div');
+    hobbies.setAttribute('id', 'hobbies');
+    hobbies.appendChild(hobbyCardCreator(profilePic, 'Basketball', 'I love playing basketball and watching NBA games.'));
 
     hobbiesSection.appendChild(hobbiesTitle);
-    hobbiesSection.appendChild(hobbiesDescription);
+    hobbiesSection.appendChild(hobbies);
 
     content.appendChild(hobbiesSection);
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('image-animation');
+            }
+        })
+    });
+    const viewbox = document.querySelectorAll('.hobby-card');
+    console.log(viewbox);
+    viewbox.forEach(img => {
+        observer.observe(img);
+    });
 }
