@@ -156,13 +156,22 @@ section.about#hobbies-container h2#hobbies-title {
 }
 
 section.about#hobbies-container #hobbies {
-
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 section.about#hobbies-container #hobbies .hobby-card {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 3fr;
+    
+    background-size: cover !important;
+    background-position: center !important;
+    background-color: rgba(23, 23, 23, 0.8) !important;
+    background-blend-mode: overlay !important;
+
+    padding: 4rem 1rem;
 }
 
 section.about#hobbies-container #hobbies .hobby-card.image-animation {

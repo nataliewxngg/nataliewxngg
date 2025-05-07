@@ -351,6 +351,7 @@ section#get-in-touch button {
 
     transition: var(--default-transition);
 }
+
 section#get-in-touch button:hover {
     cursor: pointer;
     transform: scale(1.05);
@@ -358,7 +359,7 @@ section#get-in-touch button:hover {
 }
 
 section#get-in-touch button svg {
-    width: 3rem;
+    width: 2.5rem;
     vertical-align: middle;
 }
 

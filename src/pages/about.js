@@ -14,6 +14,8 @@ import cppLogo from '../assets/techstack-logos/c++-icon.svg';
 import csharpLogo from '../assets/techstack-logos/csharp-icon.svg';
 
 import cookingPic from '../assets/hobbies/cooking.jpg';
+import basketballPic from '../assets/hobbies/basketball.jpg';
+import instrumentalMusicPic from '../assets/hobbies/instrumental-music.jpg';
 
 export default function about() {
     // Set page title
@@ -106,6 +108,10 @@ export default function about() {
     skills.appendChild(skillCardCreator('HTML', html5Logo, 'Standard markup language for creating web pages.'));
     skills.appendChild(skillCardCreator('CSS', css3Logo, 'Style sheet language used to style web pages.'));
     skills.appendChild(skillCardCreator('JavaScript', jsLogo, 'Programming language that enables interactive web pages.'));
+    skills.appendChild(skillCardCreator('Python', pythonLogo, 'High-level programming language known for its readability and versatility.'));
+    skills.appendChild(skillCardCreator('Java', javaLogo, 'High-level programming language that is class-based and object-oriented.'));
+    skills.appendChild(skillCardCreator('C++', cppLogo, 'General-purpose programming language that is an extension of C.'));
+    skills.appendChild(skillCardCreator('C#', csharpLogo, 'General-purpose programming language developed by Microsoft.'));
 
     skillsSection.appendChild(skillsTitle);
     skillsSection.appendChild(skills);
@@ -125,6 +131,8 @@ export default function about() {
     const hobbies = document.createElement('div');
     hobbies.setAttribute('id', 'hobbies');
     hobbies.appendChild(hobbyCardCreator(cookingPic, 'Cooking/Baking', 'I love to cook and bake in my free time!'));
+    hobbies.appendChild(hobbyCardCreator(basketballPic, 'Basketball', 'I enjoy playing basketball with friends and family!'));
+    hobbies.appendChild(hobbyCardCreator(instrumentalMusicPic, 'Instrumental Music', 'I play the piano, cello, trombone, and guitar!'));
 
     hobbiesSection.appendChild(hobbiesTitle);
     hobbiesSection.appendChild(hobbies);
