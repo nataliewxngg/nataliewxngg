@@ -7,6 +7,17 @@
     align-items: center;
 }
 
+.about#header-container #location-container {
+    display: flex;
+    fill: var(--primary-color);
+    gap: 0.5rem;
+}
+
+.about#header-container #location-container svg {
+    width: 1rem;
+    height: auto;
+}
+
 .about#header-container #header-text-container {
     display: flex;
     flex-direction: column;
@@ -17,12 +28,17 @@
     color: var(--primary-color);
 }
 
+.about#header-container p#location svg {
+    fill: var(--primary-color);
+    width: 1rem;
+    height: auto;
+}
+
 .about#header-container h1#header-title {
     font-size: clamp(2rem, 5vw, 3rem);
 }
 
 .about#header-container p#header-desc {
-    /* color: var(--primary-color); */
 }
 
 .about#header-container img#header-image {
@@ -46,6 +62,7 @@ section.about#story-container #story .chapter {
     border-radius: 10px;
 
     display: flex;
+    align-items: center;
     position: relative;
 }
 
@@ -143,7 +160,9 @@ section.about#hobbies-container #hobbies {
 }
 
 section.about#hobbies-container #hobbies .hobby-card {
-    display: flex;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr;
 }
 
 section.about#hobbies-container #hobbies .hobby-card.image-animation {
@@ -159,6 +178,11 @@ section.about#hobbies-container #hobbies .hobby-card.image-animation {
         transform: translate(0);
         opacity: 1;
     }
+}
+
+section.about#hobbies-container #hobbies .hobby-card img {
+    width: 100%;
+    height: auto;
 }
 
 /* Mobile styles */
