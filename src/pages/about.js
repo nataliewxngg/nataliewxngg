@@ -17,6 +17,9 @@ import cookingPic from '../assets/hobbies/cooking.jpg';
 import basketballPic from '../assets/hobbies/basketball.jpg';
 import instrumentalMusicPic from '../assets/hobbies/instrumental-music.jpg';
 
+import azureFundamentalsCert from '../assets/azure-fundamentals-certificate.png';
+import azureAIFundamentalsCert from '../assets/azure-ai-fundamentals-certificate.png';
+
 export default function about() {
     // Set page title
     const title = document.querySelector('title');
@@ -56,7 +59,7 @@ export default function about() {
 
     const headerDescription = document.createElement('p');
     headerDescription.setAttribute('id', 'header-desc');
-    headerDescription.innerText = 'Hi! I\'m Natalie, a computer engineering student at the University of Waterloo. As a driven individual, I have cultivated an immense passion and developed a solid foundation in various aspects of software development, establishing proficiency in Java, Python, C++, HTML, CSS, and JavaScript. With my collection of skills and expertise, I am eager to accelerate the ongoing growth of today\'s technologies through meaningful and collaborative work.'
+    headerDescription.innerText = 'Hey! I\'m Natalie, a computer engineering student at the University of Waterloo. \n\nAs a driven individual passionate about software development, I have cultivated a strong foundation in the field, gaining competence in a multitude of programming/markup languages and technologies. \n\nWith my skills and expertise, I am eager to contribute to the ongoing growth of today\'s technologies through meaningful and collaborative work.'
     
     const headerImage = document.createElement('img');
     headerImage.setAttribute('id', 'header-image');
@@ -117,6 +120,48 @@ export default function about() {
     skillsSection.appendChild(skills);
 
     content.appendChild(skillsSection);
+
+    // Certificates
+    const certificatesSection = document.createElement('section');
+    certificatesSection.setAttribute('id', 'certificates-container');
+    certificatesSection.classList.add('about');
+
+    const certificatesTitle = document.createElement('h2');
+    certificatesTitle.setAttribute('id', 'certificates-title');
+    certificatesTitle.innerText = 'Certificates';
+
+    const certificates = document.createElement('div');
+    certificates.setAttribute('id', 'certificates');
+
+    const certificate1 = document.createElement('button');
+    const certificate1Img = document.createElement('img');
+    certificate1Img.setAttribute('src', azureFundamentalsCert)
+    const certificate1Text = document.createElement('p');
+    certificate1Text.innerText = 'Azure Fundamentals';
+    certificate1.appendChild(certificate1Img);
+    certificate1.appendChild(certificate1Text);
+    certificate1.addEventListener('click', () => {
+        window.open('https://www.credly.com/badges/5d960f13-b520-4841-8920-d679d65f8c2b/public_url', '_blank');
+    });
+
+    const certificate2 = document.createElement('button');
+    const certificate2Img = document.createElement('img');
+    certificate2Img.setAttribute('src', azureAIFundamentalsCert)
+    const certificate2Text = document.createElement('p');
+    certificate2Text.innerText = 'Azure AI Fundamentals';
+    certificate2.appendChild(certificate2Img);
+    certificate2.appendChild(certificate2Text);
+    certificate2.addEventListener('click', () => {
+        window.open('https://www.credly.com/badges/ef9edba2-64ae-4e8f-8905-0ca703508079/public_url', '_blank');
+    });
+
+    certificates.appendChild(certificate1);
+    certificates.appendChild(certificate2);
+
+    certificatesSection.appendChild(certificatesTitle);
+    certificatesSection.appendChild(certificates);
+
+    content.appendChild(certificatesSection);
 
     // Interests and Hobbies
     const hobbiesSection = document.createElement('section');   

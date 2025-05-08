@@ -2,19 +2,20 @@
 .about#header-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 5rem;
+    gap: 2rem;
 
     align-items: center;
 }
 
 .about#header-container #location-container {
     display: flex;
+    align-items: center;
     fill: var(--primary-color);
     gap: 0.5rem;
 }
 
 .about#header-container #location-container svg {
-    width: 1rem;
+    width: 1.5rem;
     height: auto;
 }
 
@@ -146,6 +147,44 @@ section.about#skills-container #skills .skill-card p {
     color: var(--primary-color);
 }
 
+/* Certificates Styles */
+section.about#certificates-container {
+
+}
+
+section.about#certificates-container h2#certificates-title {
+
+}
+
+section.about#certificates-container #certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+section.about#certificates-container #certificates button {
+    background: none;
+    border: 1px solid var(--outline-color);
+    color: var(--text-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    transition: var(--default-transition);
+}
+
+section.about#certificates-container #certificates button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+section.about#certificates-container #certificates button img {
+    width: 50px;
+}
+
 /* Interests and Hobbies Styles */
 section.about#hobbies-container {
 
@@ -199,5 +238,9 @@ section.about#hobbies-container #hobbies .hobby-card img {
     /* Header styles */
     .about#header-container {
         grid-template-columns: 1fr;
+    }
+
+    .about#header-container img#header-image {
+        display: none;
     }
 }
