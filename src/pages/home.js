@@ -48,7 +48,7 @@ export default function Home() {
     header.appendChild(location);
 
     const description = document.createElement('p');
-    description.innerText = 'I\'m an 18 year old full-stack developer with a passion for creating web applications and discovering new technologies. I love to learn and am always seeking new challenges.';
+    description.innerText = 'I\'m a 19 year old full-stack developer with a passion for creating web applications and discovering new technologies. I love to learn and am always seeking new challenges.';
     header.appendChild(description);
 
     const buttons = document.createElement('div');
