@@ -1,4 +1,4 @@
-import profilePicSrc from '../assets/profile-pic.jpg';
+import profilePicSrc from '../assets/profile-pic.png';
 
 const header = document.createElement('header');
 
